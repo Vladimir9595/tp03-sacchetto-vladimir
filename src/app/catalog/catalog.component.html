@@ -1,0 +1,21 @@
+<div>
+  <h2>Produits</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Catégorie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price | currency : "EUR" }}</td>
+        <td>{{ product.category }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
