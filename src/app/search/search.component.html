@@ -1,27 +1,41 @@
-<div class="form-group col-md-3">
-  <input
-    type="text"
-    class="form-control mb-3"
-    placeholder="Nom du produit"
-    name="name"
-    [(ngModel)]="searchParams.name"
-  />
-</div>
-<div class="form-group col-md-3">
-  <input
-    type="text"
-    class="form-control mb-3"
-    placeholder="Catégorie"
-    name="category"
-    [(ngModel)]="searchParams.category"
-  />
-</div>
-<div class="form-group col-md-3">
-  <input
-    type="number"
-    class="form-control mb-3"
-    placeholder="Prix maximum"
-    name="price"
-    [(ngModel)]="searchParams.price"
-  />
+<div>
+  <h2>Recherche de produits</h2>
+  <form>
+    <div class="form-group col-md-3">
+      <label class="px-2 py-2" for="name">Nom du produit :</label>
+      <input
+        type="text"
+        class="form-control mb-3"
+        id="name"
+        placeholder="Nom du produit"
+        name="name"
+        [(ngModel)]="searchParams.name"
+        (ngModelChange)="searchProducts()"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label class="px-2 py-2" for="category">Catégorie :</label>
+      <input
+        type="text"
+        class="form-control mb-3"
+        id="category"
+        placeholder="Catégorie"
+        name="category"
+        [(ngModel)]="searchParams.category"
+        (ngModelChange)="searchProducts()"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label class="px-2 py-2" for="category">Prix :</label>
+      <input
+        type="number"
+        class="form-control mb-3"
+        id="price"
+        placeholder="Prix"
+        name="price"
+        [(ngModel)]="searchParams.price"
+        (ngModelChange)="searchProducts()"
+      />
+    </div>
+  </form>
 </div>
